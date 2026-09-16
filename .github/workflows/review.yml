@@ -1,0 +1,10 @@
+name: AI Review
+
+on:
+  pull_request:
+
+jobs:
+  review:
+    uses: radeshgovind-2005/ai-code-reviewer/.github/workflows/review.yml@main
+    secrets:
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
