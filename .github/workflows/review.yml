@@ -8,5 +8,6 @@ jobs:
     uses: radeshgovind-2005/ai-code-reviewer/.github/workflows/review.yml@v1
     with:
       reviewer_ref: v1 # keep in sync with the @ref above
+      model_timeout: 1 # TEST ONLY: force a timeout to check fail-closed
     secrets:
       LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
